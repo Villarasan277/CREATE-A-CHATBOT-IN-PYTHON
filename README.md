@@ -1,2 +1,35 @@
-# CREATE-A-CHATBOT-IN-PYTHON
-This project, titled "Creating a Chatbot in Python," addresses the critical need for enhancing customer service and user experience on websites and applications. In today's digital landscape, customers have high expectations for prompt and effective assistance when they encounter issues or questions while using an app or website. Failing
+# Chatbot Deployment in python 
+This gives 2 deployment options:
+- Deploy within Flask app with jinja2 template
+- Serve only the Flask prediction API. The used html and javascript files can be included in any Frontend application (with only a slight modification) and can run completely separate from the Flask App then.
+
+```
+Install dependencies
+```
+$ (venv) pip install Flask torch torchvision nltk
+```
+Install nltk package
+```
+$ (venv) python
+>>> import nltk
+>>> nltk.download('punkt')
+```
+Modify `intents.json` with different intents and responses for your Chatbot
+
+Run
+```
+$ (venv) python train.py
+```
+This will dump data.pth file. And then run
+the following command to test it in the console.
+```
+$ (venv) python chat.py
+```
+
+Now for deployment follow my tutorial to implement `app.py` and `app.js`.
+
+pip install packages
+
+numpy
+pandas
+random kaggle
